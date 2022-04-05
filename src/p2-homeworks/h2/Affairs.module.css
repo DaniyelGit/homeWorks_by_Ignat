@@ -1,0 +1,49 @@
+span {
+    display: inline-block;
+}
+
+.affair__name {
+    font-size: 16px;
+    font-weight: 700;
+    width: 130px;
+}
+
+.affair__priority {
+    width: 100px;
+}
+
+.wrapper__buttonsFilter {
+    margin-top: 10px;
+}
+
+.wrapper__buttonsFilter button{
+    margin-right: 10px;
+}
+
+.affair__delete {
+    padding: 5px 10px;
+    font-weight: 700;
+    background-color: #ff0000;
+}
+
+.affair__delete {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.wrapper__buttonsFilter button {
+    color: #fff;
+    background-color: #01b701;
+}
+
+.low {
+    color: #044604;
+}
+
+.high {
+    color: #a10000;
+}
+
+.middle {
+    color: #ff8700;
+}

@@ -1,0 +1,63 @@
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+
+.messageBlock {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.messageBlock__image {
+    display: flex;
+    align-items: flex-end;
+}
+
+.messageBlock__image img {
+    width: 80px;
+    height: 80px;
+}
+
+.message__entryField {
+    position: relative;
+    background-color: #32D73A;
+    width: 300px;
+    padding: 10px 10px;
+    border-radius: 5px 5px 5px 0;
+    margin-left: 5px;
+}
+
+.message__entryField:before {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 40px;
+    background-color: #32D73A;
+    left: -15px;
+    bottom: 0;
+}
+
+.message__entryField:after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 40px;
+    background-color: #fff;
+    border-radius: 0 0 15px 0;
+    left: -15px;
+    bottom: 0;
+}
+
+.message__entryField h4 {
+    line-height: 25px;
+}
+
+.message__entryField p {
+    font-size: 15px;
+}
+
+.message__entryField span {
+    display: block;
+    font-size: 13px;
+    text-align: right;
+    font-weight: bold;
+}
