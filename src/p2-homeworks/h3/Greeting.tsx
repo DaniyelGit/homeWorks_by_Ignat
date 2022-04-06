@@ -1,26 +1,36 @@
-import React from 'react'
+import React, {ChangeEvent} from 'react'
 import s from './Greeting.module.css'
+import {Button, TextField} from "@mui/material";
 
 type GreetingPropsType = {
-    name: any // need to fix any
-    setNameCallback: any // need to fix any
-    addUser: any // need to fix any
-    error: any // need to fix any
-    totalUsers: any // need to fix any
+    name: string
+    setNameCallback: (e: ChangeEvent<HTMLInputElement>) => void
+    addUser: () => void
+    error: boolean
+    totalUsers: number
 }
 
 // презентационная компонента (для верстальщика)
 const Greeting: React.FC<GreetingPropsType> = (
     {name, setNameCallback, addUser, error, totalUsers} // деструктуризация пропсов
 ) => {
-    const inputClass = s.error // need to fix with (?:)
+    // const inputClass = error ? s.error : '';
+
+    const textError = error ? 'Вы не ввели Имя': 'Введите Имя';
 
     return (
-        <div>
-            <input value={name} onChange={setNameCallback} className={inputClass}/>
-            <span>{error}</span>
-            <button onClick={addUser}>add</button>
-            <span>{totalUsers}</span>
+        <div className={s.wrapper}>
+            <TextField value={name}
+                       error={error}
+                       onChange={setNameCallback}
+                       // className={inputClass}
+                       label={textError}
+                       variant={'outlined'}
+                       size={'small'}
+                       autoFocus
+            />
+            <Button style={{marginLeft: '20px'}} onClick={addUser} variant="contained">add</Button>
+            <span className={s.count}>{totalUsers}</span>
         </div>
     )
 }

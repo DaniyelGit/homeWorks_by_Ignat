@@ -1,7 +1,15 @@
-.someClass {
-
+.wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
 }
+
 
 .error {
     border: 1px solid red;
+}
+
+.count {
+    margin-left: 10px;
+    font-weight: 700;
 }
