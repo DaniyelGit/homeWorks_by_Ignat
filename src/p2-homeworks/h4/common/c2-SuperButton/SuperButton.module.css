@@ -10,6 +10,7 @@
     border-radius: 1px;
     transition: 0.2s;
     background-color: #3867e1;
+    margin: 10px 10px 0 0;
 }
 
 .default:hover {
