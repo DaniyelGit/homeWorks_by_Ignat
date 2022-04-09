@@ -1,7 +1,38 @@
 .default {
+    display: inline-block;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    user-select: none;
+    padding: .5em 2em;
+    outline: none;
+    border: none;
+    border-radius: 1px;
+    transition: 0.2s;
+    background-color: #3867e1;
+}
 
+.default:hover {
+    background: rgba(83, 118, 210, 0.11);
+}
+
+.default:disabled {
+    background: rgba(64, 79, 101, 0.2);
 }
 
 .red {
-    background: red;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    user-select: none;
+    padding: .5em 2em;
+    outline: none;
+    border: none;
+    border-radius: 1px;
+    transition: 0.2s;
+    background-color: #a41313;
+}
+
+.red:hover {
+    background: #ef1919;
 }
