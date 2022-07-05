@@ -1,7 +1,7 @@
 .link {
     text-decoration: none;
     color: #167e04;
-    margin: 10px;
+    margin-right: 10px;
     font-weight: 900;
 }
 
@@ -10,24 +10,28 @@
 }
 
 .active {
+    text-decoration: none;
+    font-weight: 900;
+    margin-right: 10px;
     color: darkslateblue;
-}
-
-.block {
-    width: 25px;
-    height: 25px;
-    margin: 10px;
-    background-color: darkslateblue;
 }
 
 .header {
     display: flex;
-    width: 350px;
-    transform: translate(-280px);
+    align-items: center;
+    transform: translateX(-235px);
     transition-duration: 500ms;
+    width: 350px;
+}
+
+
+.block {
+    width: 25px;
+    height: 25px;
+    background-color: darkslateblue;
 }
 
 .header:hover {
-    transform: translate(0);
+    transform: translateX(0);
     transition-duration: 500ms;
 }
