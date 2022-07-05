@@ -7,7 +7,7 @@ type GreetingPropsType = {
     setNameCallback: (e: ChangeEvent<HTMLInputElement>) => void
     addUser: () => void
     onEnter: (e: KeyboardEvent<HTMLInputElement>) => void
-    error: boolean
+    error: string
     totalUsers: number
 }
 
@@ -15,20 +15,20 @@ type GreetingPropsType = {
 const Greeting: React.FC<GreetingPropsType> = (
     {name, setNameCallback, addUser, error, totalUsers, onEnter} // деструктуризация пропсов
 ) => {
-    // const inputClass = error ? s.error : '';
-
-    const textError = error ? 'Вы не ввели Имя': 'Введите Имя';
+    const inputClass = error ? s.inputError : s.input;
 
     return (
         <div className={s.wrapper}>
-            <TextField value={name}
-                       error={error}
+            <div>
+                <input type="text"
+                       value={name}
                        onChange={setNameCallback}
                        onKeyPress={onEnter}
-                       label={textError}
-                       variant={'outlined'}
-                       size={'small'}
-            />
+                       onBlur={setNameCallback}
+                       className={inputClass}
+                />
+                <div className={s.error}>{error}</div>
+            </div>
             <Button
                 style={{marginLeft: '20px'}}
                 onClick={addUser}

@@ -1,12 +1,27 @@
 .wrapper {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 20px;
 }
 
 
+.input {
+    padding: 10px;
+    background: #05388f;
+    color: aquamarine;
+}
+
+.inputError {
+    padding: 10px;
+    background: #05388f;
+    color: aquamarine;
+    border: 2px solid red;
+    outline: none;
+}
+
 .error {
-    border: 1px solid red;
+    color: red;
+    height: 25px;
 }
 
 .count {
